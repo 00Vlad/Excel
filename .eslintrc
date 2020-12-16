@@ -10,7 +10,9 @@
     "linebreak-style": "off",
     "quotes": "off",
     "object-curly-spacing": "off",
-    "require-jsdoc": "off"
+    "require-jsdoc": "off",
+    "spaced-comment": "off",
+    "arrow-parens": "off"
   },
   "extends": [
     "eslint:recommended",
