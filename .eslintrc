@@ -12,7 +12,9 @@
     "object-curly-spacing": "off",
     "require-jsdoc": "off",
     "spaced-comment": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "operator-linebreak": "off",
+    "curly": "off"
   },
   "extends": [
     "eslint:recommended",
