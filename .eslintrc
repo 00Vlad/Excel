@@ -14,7 +14,8 @@
     "spaced-comment": "off",
     "arrow-parens": "off",
     "operator-linebreak": "off",
-    "curly": "off"
+    "curly": "off",
+    "comma-dangle": "off"
   },
   "extends": [
     "eslint:recommended",
