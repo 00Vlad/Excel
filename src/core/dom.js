@@ -1,5 +1,6 @@
 class Dom {
   constructor(selector) {
+    //this.$$listeners = {}
     this.$el =
       typeof selector === "string"
         ? document.querySelector(selector)
@@ -21,12 +22,14 @@ class Dom {
   }
 
   on(eventType, callback) {
+    //this.$$listeners[eventType] = callback
     this.$el.addEventListener(eventType, callback)
   }
 
-  //off(eventType, callback) {
-  //  this.$el.removeEventListener(eventType, callback)
-  //}
+  off(eventType, callback) {
+    // -------
+    this.$el.removeEventListener(eventType, callback)
+  }
 
   // полифилл для метода append
   append(node) {
