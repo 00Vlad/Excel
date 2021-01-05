@@ -5,7 +5,11 @@ export class ExcelComponent extends DomListener {
     super($root, options.listeners)
     // проверка на || для EsLint'а
     this.name = options.name || "'component'"
+
+    this.prepare()
   }
+
+  prepare() {}
 
   // Returns component template
   toHTML() {
