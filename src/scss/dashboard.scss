@@ -2,6 +2,10 @@
 @import "mixins";
 
 .db {
+  a {
+    color: #000;
+    text-decoration: none;
+  }
 
   &__header {
     position: fixed;
@@ -79,16 +83,9 @@
       border-radius: 25px;
     }
 
-    a {
-      text-decoration: none;
-      cursor: pointer;
+    span {
       color: #202124;
       font-size: 14px;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
-
 }

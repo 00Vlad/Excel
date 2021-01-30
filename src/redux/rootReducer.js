@@ -3,13 +3,13 @@ import {
   CHANGE_TEXT,
   CHANGE_STYLES,
   APPLY_STYLE,
-  CHANGE_TITLE
+  CHANGE_TITLE,
+  UPDATE_DATE
 } from "./types"
 
 export function rootReducer(state, action) {
   let field
   let val
-  //console.log("Action: ", action)
   switch (action.type) {
     case TABLE_RESIZE:
       field = action.data.type === 'col' ? 'colState' : 'rowState'
@@ -39,12 +39,14 @@ export function rootReducer(state, action) {
       }
     case CHANGE_TITLE:
       return {...state, title: action.data}
+    case UPDATE_DATE:
+      return {...state, openDate: new Date().toJSON()}
     default: return state
   }
 }
 
 function value(state, field, action) {
-  const val = state[field] || {}
+  const val = {...state[field]} || {}
   val[action.data.id] = action.data.value
   return val
 }

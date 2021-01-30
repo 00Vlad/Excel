@@ -6,7 +6,6 @@ import { shouldResize, isCell, matrix, nextSelector} from "./table.functions"
 import { TableSelection } from "./TableSelection"
 import { defaultStyles } from '@/constants'
 import { parse } from '@core/parse'
-// Импорт всего содержимого как переменная actions
 import * as actions from '@/redux/actions'
 
 
@@ -115,7 +114,6 @@ export class Table extends ExcelComponent {
   }
 
   onInput(event) {
-    //this.$emit('table:input', $(event.target))
     this.updateTextInStore($(event.target).text())
   }
 }
