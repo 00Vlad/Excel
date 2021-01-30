@@ -32,8 +32,6 @@ export class Router {
     const Page = ActiveRoute.path.includes('excel')
         ? this.routes.excel
         : this.routes.dashboard
-    //const Page = ActiveRoute.path || 'dashboard'
-    //this.routes[Page]
 
     this.page = new Page(ActiveRoute.param)
 

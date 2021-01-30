@@ -27,7 +27,6 @@ export function changeStyles(data) {
     data
   }
 }
-
 // value, ids
 export function applyStyle(data) {
   return {
